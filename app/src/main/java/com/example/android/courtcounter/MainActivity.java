@@ -10,16 +10,16 @@ import android.widget.TextView;
  */
 public class MainActivity extends AppCompatActivity {
 
+    // Tracks the score for Team A
     int scoreTeamA = 0;
+
+    // Tracks the score for Team B
     int scoreTeamB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String jamesbond = "hi";
-        String jamesBond = "hello";
-        String s = jamesBond + jamesbond;
     }
 
     /**
@@ -80,6 +80,9 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
+    /**
+     * Resets the score for both teams back to 0.
+     */
     public void resetScore(View v) {
         scoreTeamA = 0;
         scoreTeamB = 0;
